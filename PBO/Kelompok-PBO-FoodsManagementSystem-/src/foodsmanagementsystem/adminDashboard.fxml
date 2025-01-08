@@ -233,7 +233,7 @@
                                         <TableColumn fx:id="addProducts_col_brandName" prefWidth="119.0" text="Brand Name" />
                                           <TableColumn fx:id="addProducts_col_productName" prefWidth="127.0" text="Product Name" />
                                           <TableColumn fx:id="addProducts_col_status" prefWidth="103.0" text="Status" />
-                                          <TableColumn fx:id="addProducts_col_price" prefWidth="93.0" text="Price (Rp)" />
+                                          <TableColumn fx:id="addProducts_col_price" prefWidth="93.0" text="Price " />
                                       </columns>
                                     </TableView>
                                  </children>
