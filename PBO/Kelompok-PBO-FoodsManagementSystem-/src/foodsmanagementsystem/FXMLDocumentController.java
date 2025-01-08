@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package foodsmanagementsystem;
 
 import java.net.URL;
@@ -28,10 +24,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author Haikal Erlana
- */
+
 public class FXMLDocumentController implements Initializable {
     
     @FXML
@@ -89,9 +82,9 @@ public class FXMLDocumentController implements Initializable {
             if(employee_id.getText().isEmpty()
                     || employee_password.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Terjadi Kesalahan!");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all black fields");
+                alert.setContentText("Tolong isi kolom yang kosong!");
                 alert.showAndWait();
             }else{
                 prepare.setString(1, employee_id.getText());
@@ -105,9 +98,9 @@ public class FXMLDocumentController implements Initializable {
                     
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Succesfully Login!");
+                    alert.setContentText("Berhasil Masuk!");
                     alert.showAndWait();
                     
                     employee_loginBtn.getScene().getWindow().hide();
@@ -134,9 +127,9 @@ public class FXMLDocumentController implements Initializable {
                     
                 }else{
                     alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("Error Massage");
+                    alert.setTitle("Terjadi Kesalahan!");
                     alert.setHeaderText(null);
-                    alert.setContentText("Wrong EmployeeID/Password");
+                    alert.setContentText("customerID dan kata sandi salah");
                     alert.showAndWait();
                 }
             }
@@ -159,9 +152,9 @@ public class FXMLDocumentController implements Initializable {
             if(admin_username.getText().isEmpty()
                     || admin_password.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Terjadi Kesalahan");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi kolom yang kosong!");
                 alert.showAndWait();
             }else{
                 prepare = connect.prepareStatement(adminData);
@@ -174,9 +167,9 @@ public class FXMLDocumentController implements Initializable {
                     getData.username = admin_username.getText();
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Succesfully Login");
+                    alert.setContentText("Berhasil Masuk!");
                     alert.showAndWait();
                     
                     admin_loginBtn.getScene().getWindow().hide();
@@ -202,9 +195,9 @@ public class FXMLDocumentController implements Initializable {
                     stage.show();
                 }else{
                     alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("Error Massage");
+                    alert.setTitle("Terjadi Kesalahan");
                     alert.setHeaderText(null);
-                    alert.setContentText("Wrong Username/Password");
+                    alert.setContentText("Nama pengguna atau kata sandi salah!");
                     alert.showAndWait();
                 }
             }

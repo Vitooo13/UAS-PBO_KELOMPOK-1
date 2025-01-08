@@ -256,7 +256,7 @@
                                        <children>
                                           <TableView fx:id="employees_tableView" layoutX="26.0" layoutY="19.0" onMouseClicked="#employeesSelect" prefHeight="225.0" prefWidth="779.0">
                                             <columns>
-                                              <TableColumn fx:id="employees_col_employeeID" prefWidth="117.0" text="Employee ID" />
+                                              <TableColumn fx:id="employees_col_employeeID" prefWidth="117.0" text="Customer ID" />
                                               <TableColumn fx:id="employees_col_password" prefWidth="125.0" text="Password" />
                                                 <TableColumn fx:id="employees_col_firstName" prefWidth="131.0" text="First Name" />
                                                 <TableColumn fx:id="employees_col_lastName" prefWidth="140.0" text="Last Name" />
@@ -266,7 +266,7 @@
                                           </TableView>
                                        </children>
                                     </AnchorPane>
-                                    <Label layoutX="35.0" layoutY="302.0" text="Employee ID:">
+                                    <Label layoutX="35.0" layoutY="302.0" text="Customer ID:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>

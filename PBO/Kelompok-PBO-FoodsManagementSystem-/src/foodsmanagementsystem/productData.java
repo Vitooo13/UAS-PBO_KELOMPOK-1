@@ -8,31 +8,31 @@ public class productData {
     private String status;
     private Double price;
 
-    public productData(String productId, String brand, String productName, String status, Double price) {
+    public productData(String productId, String brand, String productName, String status, Double price){
         this.productId = productId;
         this.brand = brand;
         this.productName = productName;
         this.status = status;
         this.price = price;
-    }
 
-    public String getProductId() {
+    }
+    public String getProductId(){
         return productId;
     }
 
-    public String getBrand() {
+    public String getBrand(){
         return brand;
     }
 
-    public String getproductName() {
+    public String getProductName(){
         return productName;
     }
 
-    public String getStatus() {
+    public String getStatus(){
         return status;
     }
 
-    public Double getPrice() {
+    public Double getPrice(){
         return price;
     }
 }
