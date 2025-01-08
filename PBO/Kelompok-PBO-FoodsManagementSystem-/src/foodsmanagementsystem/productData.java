@@ -8,8 +8,8 @@ public class productData {
     private String status;
     private Double price;
 
-    public productData(String productID, String brand, String productName, String status, Double price) {
-        this.productId = productID;
+    public productData(String productId, String brand, String productName, String status, Double price) {
+        this.productId = productId;
         this.brand = brand;
         this.productName = productName;
         this.status = status;
@@ -24,7 +24,7 @@ public class productData {
         return brand;
     }
 
-    public String getProductName() {
+    public String getproductName() {
         return productName;
     }
 
