@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\prak pbo kel\\fontawesomefx-8.2.jar",
+        "c:\\prak pbo kel\\jfreechart-1.0.19.jar",
+        "c:\\prak pbo kel\\mysql-connector-java-5.1.48.jar",
+        "c:\\prak pbo kel\\ojdbc14-10.2.0.2.0.jar"
+    ]
+}
