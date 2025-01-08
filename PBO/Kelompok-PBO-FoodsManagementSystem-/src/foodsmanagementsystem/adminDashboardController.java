@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package foodsmanagementsystem;
 
 import java.net.URL;
@@ -43,10 +39,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author Haikal Erlana
- */
 public class adminDashboardController implements Initializable {
 
     @FXML
@@ -302,9 +294,9 @@ public class adminDashboardController implements Initializable {
                     || addProducts_status.getSelectionModel().getSelectedItem() == null
                     || addProducts_price.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 
@@ -316,9 +308,9 @@ public class adminDashboardController implements Initializable {
                 
                 if(result.next()){
                     alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("Error Massage");
+                    alert.setTitle("Pesan Error");
                     alert.setHeaderText(null);
-                    alert.setContentText("Product ID: " + addProducts_productID.getText() + " was already exist!");
+                    alert.setContentText("Product ID: " + addProducts_productID.getText() + " sudah ada!");
                     alert.showAndWait();
                 }else{
                     prepare = connect.prepareStatement(insertProduct);
@@ -331,9 +323,9 @@ public class adminDashboardController implements Initializable {
                     prepare.executeUpdate();
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successful Added!");
+                    alert.setContentText("Berhasil Ditambah!");
                     alert.showAndWait();
                     
                     
@@ -363,9 +355,9 @@ public class adminDashboardController implements Initializable {
                     || addProducts_status.getSelectionModel().getSelectedItem() == null
                     || addProducts_price.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
@@ -379,9 +371,9 @@ public class adminDashboardController implements Initializable {
                     statement = connect.createStatement();
                     statement.executeUpdate(updateProduct);
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Succesfully Update!");
+                    alert.setContentText("Berhasil ditambahkan!");
                     alert.showAndWait();
                     
                     addProductsShowData();
@@ -408,15 +400,15 @@ public class adminDashboardController implements Initializable {
                     || addProducts_status.getSelectionModel().getSelectedItem() == null
                     || addProducts_price.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Massage");
+                alert.setTitle("Pesan Konfirmasi");
                 alert.setHeaderText(null);
-                alert.setContentText("Are you sure you want to DELETE Product ID: " + addProducts_productID.getText() + "?");
+                alert.setContentText("Apakah kamu yakin akan MENGHAPUS Product ID: " + addProducts_productID.getText() + "?");
                 
                 Optional<ButtonType> option = alert.showAndWait();
                 
@@ -425,9 +417,9 @@ public class adminDashboardController implements Initializable {
                     prepare.executeUpdate();
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Information");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successfully Deleted!");
+                    alert.setContentText("Berhasil ditambahkan!");
                     alert.showAndWait();
                     
                     addProductsShowData();
@@ -574,9 +566,9 @@ public class adminDashboardController implements Initializable {
                     || employees_lastName.getText().isEmpty()
                     || employees_gender.getSelectionModel().getSelectedItem() == null){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 
@@ -588,9 +580,9 @@ public class adminDashboardController implements Initializable {
                 
                 if(result.next()){
                     alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("Error Massage");
+                    alert.setTitle("Pesan Error");
                     alert.setHeaderText(null);
-                    alert.setContentText("Employee ID: " + employees_employeeID.getText() + " was already exist!");
+                    alert.setContentText("Customer ID: " + employees_employeeID.getText() + " sudah ada!");
                     alert.showAndWait();
                 }else{
                     prepare = connect.prepareStatement(insertEmployee);
@@ -604,9 +596,9 @@ public class adminDashboardController implements Initializable {
                     prepare.executeUpdate();
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Information");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successfully Saved!");
+                    alert.setContentText("Berhasil ditambahkan!");
                     alert.showAndWait();
                     
                     employeesShowListData();
@@ -649,16 +641,16 @@ public class adminDashboardController implements Initializable {
                     || employees_lastName.getText().isEmpty()
                     || employees_gender.getSelectionModel().getSelectedItem() == null){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 
                 alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Massage");
+                alert.setTitle("Pesan Konfirmasi");
                 alert.setHeaderText(null);
-                alert.setContentText("Are you sure you want to UPDATE Employee ID: " + employees_employeeID.getText() + "?");
+                alert.setContentText("Apakah kamu yakin ingin MENGPERBARUI Customer ID: " + employees_employeeID.getText() + "?");
                 
                 Optional<ButtonType> option = alert.showAndWait();
                 
@@ -667,9 +659,9 @@ public class adminDashboardController implements Initializable {
                     statement.executeUpdate(updateEmployee); 
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Succesfully Updated!");
+                    alert.setContentText("Berhasil diperbarui!");
                     alert.showAndWait();
                     
                     employeesShowListData();
@@ -698,15 +690,15 @@ public class adminDashboardController implements Initializable {
                     || employees_lastName.getText().isEmpty()
                     || employees_gender.getSelectionModel().getSelectedItem() == null){
                 alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Massage");
+                alert.setTitle("Pesan Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
+                alert.setContentText("Tolong isi semua field!");
                 alert.showAndWait();
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Massage");
+                alert.setTitle("Pesan Konfirmasi");
                 alert.setHeaderText(null);
-                alert.setContentText("Are you sure you want to DELETE Employee ID: " + employees_employeeID.getText() + "?");
+                alert.setContentText("Apakah kamu yakin ingin MENGHAPUS Customer ID: " + employees_employeeID.getText() + "?");
                 
                 Optional<ButtonType> option = alert.showAndWait();
                 
@@ -715,9 +707,9 @@ public class adminDashboardController implements Initializable {
                     statement.executeUpdate(deleteEmployee);
                     
                     alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Massage");
+                    alert.setTitle("Pesan Informasi");
                     alert.setHeaderText(null);
-                    alert.setContentText("Succesfully Deleted!");
+                    alert.setContentText("Berhasil dihapus!");
                     alert.showAndWait();
                     
                     employeesShowListData();
@@ -805,9 +797,9 @@ public class adminDashboardController implements Initializable {
         try {
 
             Alert alert = new Alert(AlertType.CONFIRMATION);
-            alert.setTitle("Confirmation Massage");
+            alert.setTitle("Pesan Konfirmasi");
             alert.setHeaderText(null);
-            alert.setContentText("Are you sure you want to logout");
+            alert.setContentText("Apakah kamu yakin ingin keluar?");
 
             Optional<ButtonType> option = alert.showAndWait();
 
