@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package foodsmanagementsystem;
 
 import javafx.application.Application;
@@ -13,10 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author Haikal Erlana
- */
+
 public class FoodsManagementSystem extends Application {
     
     private double x= 0;
